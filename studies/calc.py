@@ -1,6 +1,6 @@
 from math import sqrt
+from math import factorial
 class Calculator():
-
     def __init__(self):
         self.ostatni_wynik = 0
 
@@ -13,11 +13,19 @@ class Calculator():
         wynik = a - b
         self.ostatni_wynik = wynik
         print(wynik)
+
     def pomnoz(self, a, b):
         wynik = a * b
         self.ostatni_wynik = wynik
         print(wynik)
 
+    def podziel(self, a, b):
+        wynik = a / b
+        self.ostatni_wynik = wynik
+        print(wynik)
+
+    def silnia(self,a):
+        print(factorial(a))
     def funkcja_kwadratowa(self, a, b, c):
         d = b * b + 4 * a * c
         if d > 0:
@@ -33,6 +41,6 @@ class Calculator():
 
 
 calc = Calculator()
-
-
+calc.silnia(3)
+calc.funkcja_kwadratowa(1, -4, 5)
 print("Ostatni wynik Twoich obliczeń: {}".format(calc.ostatni_wynik))
