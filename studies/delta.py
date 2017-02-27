@@ -15,3 +15,8 @@ elif d == 0:
     print("Funkcja kwadratowa ma jedno rozwiązanie: {}".format(x))
 else:
     print("Funkcja kwadratowa nie ma rozwiązań")
+
+f = 5
+while f == 0
+
+    print("hej")
