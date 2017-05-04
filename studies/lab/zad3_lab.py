@@ -1,3 +1,4 @@
+
 def zamiana():
     liczba = input("Podaj liczbę: ")
     liczba = int(liczba)
@@ -12,7 +13,8 @@ def zamiana():
          7 : "siedem",
          8 : "osiem",
          9 : "dziewiec"}
-
+    if liczba == 0:
+        slownie = a[liczba]
     while liczba > 1:
         koncowka = liczba%10
         liczba = liczba/10
