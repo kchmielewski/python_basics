@@ -55,36 +55,34 @@ def stopnie():
     print("Stopien grafu: {}".format(maks))
 
 def sciezka(VE, start, koniec):
+    eu = 0
     robi = [[start, [start]]]
     while 0 < len(robi):
         (krok, path) = robi.pop(0)
         for nast_krok in VE[krok]:
             if nast_krok in path:
+                if len(path) == len(graf):
+                    for k in VE.keys():
+                        if len(VE[k]) % 2 == 0 & len(VE[k]) != 0:
+                            eu += 1
+                        else:
+                            sys.exit("Graf nie jest eulerowski, ale jest spojny")
+                    if len(VE) == eu:
+                        sys.exit("Graf jest eulerowski i spojny")
                 continue
             elif nast_krok == koniec:
                 yield path + [nast_krok]
             else:
                 robi.append([nast_krok, path + [nast_krok]])
 def euler():
-    droga = 1
-    eu = 0
+    droga = 0
     while droga < len(graf):
 
         for path in sciezka(VE, graf[0], graf[droga]):
             continue
         droga +=1
 #    sprawdzenie = set(path) & set(graf)
-    if len(path) == len(graf):
-        for k in VE.keys():
-            if len(VE[k]) % 2 == 0 & len(VE[k]) != 0:
-                eu += 1
-            else:
-                print("Graf nie jest eulerowski, ale jest spojny")
-                sys.exit(0)
-        if len(VE) == eu:
-            print("Graf jest eulerowski i spojny")
-    else:
-        print("Graf nie jest spojny ani eulerowski")
+
 
 
 
