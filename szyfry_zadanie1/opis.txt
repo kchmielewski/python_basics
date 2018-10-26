@@ -1,3 +1,5 @@
-1. Program usuwa niepotrzebne puste linie.
+﻿1. Program usuwa niepotrzebne puste linie.
+
 2. Kryptoanaliza z kryptogramem zapisywana jest w pliku decrypt.txt
+
 3. Polskie znaki są zastępowane (ą -> a, ę -> e itp.).

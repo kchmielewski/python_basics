@@ -1,1 +1,1 @@
-Z, olc
+Przykladowy test do zaszyfrowania.
